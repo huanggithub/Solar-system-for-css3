@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .map {
+            width: 100%;
+            height: 100%;
+            background-color: #333333;
+            position: relative;
+            background-image: url("1.jpg");
+        }
+        .t1 {
+            width: 60px;
+            height: 60px;
+            background-color: red;
+            box-shadow: 0 0 100px red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+        .t2 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid #1A0066;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 5s;
+
+        }
+        .t2 span {
+            width: 15px;
+            height: 15px;
+            background-color: #ffbb00;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #ffbb00;
+        }
+        .t3 {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 1px solid #1A0066;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 6s;
+        }
+        .t3 span {
+            width: 12px;
+            height: 12px;
+            background-color:  #5CADFF;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #5CADFF;
+        }
+        .t4 {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            border: 1px solid #1A0066;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 7s;
+        }
+        .t4 span {
+            width: 16px;
+            height: 16px;
+            background-color:  #8C008C;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #8C008C;
+        }
+        .t5 {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px solid #1A0066;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 8s;
+        }
+        .t5 span {
+            width: 20px;
+            height: 20px;
+            background-color:  #D96D00;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #D96D00;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001s;
+        }
+        .t5 span i {
+            width: 6px;
+            height: 6px;
+            background-color: #B200B2;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-150%,-50%);
+            box-shadow: 0 0 30px #D96D00;
+
+        }
+        .t6 {
+             width: 360px;
+             height: 360px;
+             border-radius: 50%;
+             border: 1px solid #1A0066;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 9s;
+         }
+        .t6 span {
+            width: 12px;
+            height: 12px;
+            background-color:  #00BFFF;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #00BFFF;
+        }
+        .t7 {
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            border: 1px solid #1A0066;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 10s;
+        }
+        .t7 span {
+            width: 14px;
+            height: 14px;
+            background-color:  #00FF80;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #00FF80;
+        }
+        .t8 {
+            width: 480px;
+            height: 480px;
+            border-radius: 50%;
+            border: 1px solid #1A0066;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 11s;
+        }
+        .t8 span {
+            width: 10px;
+            height: 10px;
+            background-color:  #7396FF;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #7396FF;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 8s;
+        }
+        .t8 span i {
+            width: 20px;
+            height: 10px;
+            background-color: transparent;
+            border: 1px solid #8C8C00;
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(-25%,-50%);
+            box-shadow: 0 0 30px #7396FF;
+        }
+        .t9 {
+            width: 540px;
+            height: 540px;
+            border-radius: 50%;
+            border: 1px solid #1A0066;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 8s;
+        }
+        .t9 span {
+            width: 18px;
+            height: 18px;
+            background-color:  #FFBFBF;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #FFBFBF;
+        }
+        .t10 {
+            width:600px;
+            height: 600px;
+            border-radius: 50%;
+            border: 1px solid #1A0066;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: orbit;
+            animation-duration: 15s;
+        }
+        .t10 span {
+            width: 16px;
+            height: 16px;
+            background-color:  #2626FF;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 30px #2626FF;
+        }
+        @keyframes orbit {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="map">
+
+        <div class="t1"></div>
+        <div class="t2">
+            <span></span>
+        </div>
+        <div class="t3">
+            <span></span>
+        </div>
+        <div class="t4">
+            <span></span>
+        </div>
+        <div class="t5">
+            <span>
+                <i></i>
+            </span>
+        </div>
+        <div class="t6">
+            <span></span>
+        </div>
+        <div class="t7">
+            <span></span>
+        </div>
+        <div class="t8">
+            <span>
+                <i></i>
+            </span>
+        </div>
+        <div class="t9">
+            <span></span>
+        </div>
+        <div class="t10">
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>
